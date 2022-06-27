@@ -1,4 +1,4 @@
-name: Calling Organization Workflow
+name: 'Calling Organization Workflow'
 
 on:
   pull_request:
@@ -7,4 +7,4 @@ on:
 
 jobs:
   workflow_call:
-    uses: codekoller/.github/workflows/codekoller-ci.yml@main
+    uses: 'codekoller/.github/workflows/codekoller-ci.yml@main'

@@ -2,8 +2,7 @@ name: 'Calling Organization Workflow'
 
 on:
   pull_request:
-    branches:
-      - develop
+    branches: [ develop ]
 
 jobs:
   workflow_call:

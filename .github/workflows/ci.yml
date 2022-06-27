@@ -5,5 +5,5 @@ on:
     branches: [ develop ]
 
 jobs:
-  workflow_call:
+  call_workflow:
     uses: codekoller/workflow-templates/.github/workflows/codekoller-ci.yml@main

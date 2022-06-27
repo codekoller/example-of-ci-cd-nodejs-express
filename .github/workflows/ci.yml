@@ -1,4 +1,4 @@
-name: 'Calling Organization Workflow'
+name: Calling Organization Workflow
 
 on:
   pull_request:

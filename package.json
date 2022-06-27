@@ -1,0 +1,23 @@
+{
+  "name": "example-of-ci-cd-nodejs-express",
+  "version": "0.0.1",
+  "description": "Example of CI/CD Nodejs Express",
+  "main": "server.js",
+  "repository": "git@github.com:codekoller/example-of-ci-cd-nodejs-express.git",
+  "author": "William Koller <williamkoller404@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest --runInBand",
+    "test:cov": "jest --coverage"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "supertest": "^6.2.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.3",
+    "jest": "^28.1.1"
+  }
+}

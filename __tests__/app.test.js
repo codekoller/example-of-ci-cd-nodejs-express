@@ -9,6 +9,6 @@ describe('App Test', () => {
 
   it('should response return with message correct', async () => {
     const response = await request(app).get('/');
-    expect(response.body).toEqual({ message: 'Hello world.' });
+    expect(response.body).toEqual({ message: 'Hello world!' });
   });
 });

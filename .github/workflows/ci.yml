@@ -7,3 +7,19 @@ on:
 jobs:
   workflow_call:
     uses: codekoller/workflow-templates/.github/workflows/codekoller-ci.yml@main
+
+  continuos-delivery:
+    runs-on: ubuntu-latest
+
+    needs: [workflow_call]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Deploy to heroku
+        if: ${{ github.ref == 'refs/heads/develop' }}
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
+          heroku_email: ${{ secrets.HEROKU_EMAIL }}
+          buildpack: 'https://github.com/zidizei/heroku-buildpack-tsc#v2.0'

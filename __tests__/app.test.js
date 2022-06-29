@@ -11,4 +11,20 @@ describe('App Test', () => {
     const response = await request(app).get('/');
     expect(response.body).toEqual({ message: 'Hello world!' });
   });
+
+  it('should response return list users', async () => {
+    const response = await request(app).get('/users');
+    expect(response.body).toEqual({
+      users: [
+        {
+          id: 1,
+          name: 'Peggy J. Schmidt',
+        },
+        {
+          id: 2,
+          name: 'Joy G. Musick',
+        },
+      ],
+    });
+  });
 });

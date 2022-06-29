@@ -12,10 +12,12 @@ app.get('/users', (_req, res) => {
       {
         id: 1,
         name: 'Peggy J. Schmidt',
+        age: 40,
       },
       {
         id: 2,
         name: 'Joy G. Musick',
+        age: 34,
       },
     ],
   });

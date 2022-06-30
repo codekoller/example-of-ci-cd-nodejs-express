@@ -1,19 +1,19 @@
 const request = require('supertest');
-const app = require('../src/app');
+const routers = require('../src/routers');
 
 describe('App Test', () => {
   it('should response the GET method', async () => {
-    const response = await request(app).get('/');
+    const response = await request(routers).get('/');
     expect(response.statusCode).toBe(200);
   });
 
   it('should response return with message correct', async () => {
-    const response = await request(app).get('/');
-    expect(response.body).toEqual({ message: 'Hello world!' });
+    const response = await request(routers).get('/');
+    expect(response.body).toEqual({ message: 'new router.' });
   });
 
   it('should response return list users', async () => {
-    const response = await request(app).get('/users');
+    const response = await request(routers).get('/users');
     expect(response.body).toEqual({
       users: [
         {

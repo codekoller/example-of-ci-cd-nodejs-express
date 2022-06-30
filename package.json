@@ -9,7 +9,8 @@
   "private": false,
   "scripts": {
     "start": "node src/server.js",
-    "test": "jest --runInBand",
+    "test": "jest --runInBand --detectOpenHandles",
+    "test:watch": "jest --watchAll",
     "test:cov": "jest --coverage"
   },
   "dependencies": {

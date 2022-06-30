@@ -1,6 +1,6 @@
-const app = require('./app');
+const routers = require('./routers');
 require('dotenv').config();
 
 const port = process.env.PORT;
 
-app.listen(port, () => console.log(`server running at port: ${port}`));
+routers.listen(port, () => console.log(`server running at port: ${port}`));

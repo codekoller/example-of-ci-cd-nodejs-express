@@ -10,6 +10,7 @@
   "scripts": {
     "start": "node src/server.js",
     "test": "jest --runInBand",
+    "test:watch": "jest --runInBand --watchAll",
     "test:cov": "jest --coverage"
   },
   "dependencies": {
